@@ -38,7 +38,7 @@ public class ProcessExcel {
         Map<String, Integer> afProduct=new HashMap<>();
         try {
 //            读取excel文件到对象中
-            HSSFWorkbook book = new HSSFWorkbook(new FileInputStream("/Users/juju/Downloads/ologW8.xls"));
+            HSSFWorkbook book = new HSSFWorkbook(new FileInputStream("/Users/juju/Desktop/ologw9.xls"));
 //            根据sheet名称获取表格页
 //            HSSFSheet table = book.getSheet("导出计数_业务线");
             HSSFSheet table = book.getSheet("项目上线数据");
