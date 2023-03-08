@@ -24,5 +24,16 @@ public class Cat extends Animal{
     public void run(){
         System.out.println("小猫快乐的奔跑");
     }
-    
+
+    @Override
+    public void eat() {
+        System.out.println("猫吃鱼～～");
+    }
+    public void play(){
+        System.out.println("猫咪玩线球");
+    }
+    @Override
+    public void cry(){
+        System.out.println("喵喵喵");
+    }
 }

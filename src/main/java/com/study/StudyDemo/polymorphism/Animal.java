@@ -1,6 +1,6 @@
 package com.study.StudyDemo.polymorphism;
 
-public class Animal {
+abstract public  class Animal {
     private String name;
     private int month;
     public Animal(){
@@ -26,7 +26,13 @@ public class Animal {
     public void setMonth(int month) {
         this.month = month;
     }
-    public void eat(){
-        System.out.println("动物都有吃东西的能力");
+//    子类必须实现这个方法，父类的这个方法不能具有方法体
+    public abstract void eat();
+//    父类的静态方法不能被子类重写
+    public static void say(){
+        System.out.println("hi");
+    }
+    public void cry(){
+
     }
 }
