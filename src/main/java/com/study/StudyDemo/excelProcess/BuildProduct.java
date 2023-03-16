@@ -22,12 +22,15 @@ public class BuildProduct {
         map.put("创新业务-数据服务(知楼）","sydc");
         map.put("创新业务—大底层建设(繁花）","sydc");
         map.put("创新业务-大业主","sydc");
-//          租房
-        map.put("租房-租客体验","zf");
-        map.put("租房-品牌公寓","zf");
-        map.put("租房-运营活动","zf");
-        map.put("租房-房东组","zf");
-        map.put("租房-经纪组","zf");
+        map.put("经纪赋能-助手","sydc");
+//        租房B
+        map.put("租房-租客体验","zfB");
+        map.put("租房-品牌公寓","zfB");
+        map.put("租房-运营活动","zfB");
+//          租房C
+        map.put("租房-房东组","zfC");
+        map.put("租房-经纪组","zfC");
+//        租房其他
         map.put("前端-租房组","zf");
         map.put("前端-公寓组","zf");
         map.put("58GJ移动技术部","zf");

@@ -29,6 +29,8 @@ public class ProcessExcel {
         int ggzcNum=0;
         int jyNum=0;
         int afNum=0;
+        int zfBNum=0;
+        int zfCNum=0;
 
 //        创建一个map用来存储小类别具体的数值
         Map<String, Integer> sydcProduct=new HashMap<>();
@@ -36,12 +38,15 @@ public class ProcessExcel {
         Map<String, Integer> ggzcProduct=new HashMap<>();
         Map<String, Integer> jyProduct=new HashMap<>();
         Map<String, Integer> afProduct=new HashMap<>();
+        Map<String, Integer> zfBProduct=new HashMap<>();
+        Map<String, Integer> zfCProduct=new HashMap<>();
         try {
 //            读取excel文件到对象中
             HSSFWorkbook book = new HSSFWorkbook(new FileInputStream("/Users/juju/Desktop/ologw9.xls"));
 //            根据sheet名称获取表格页
 //            HSSFSheet table = book.getSheet("导出计数_业务线");
             HSSFSheet table = book.getSheet("项目上线数据");
+//            HSSFSheet table = book.getSheet("项目创建数据");
             for(int i=1; i<= table.getLastRowNum();i++){
 //                判断属于哪个大类
                 String content=table.getRow(i).getCell(3).getStringCellValue();
@@ -60,6 +65,26 @@ public class ProcessExcel {
                             sydcProduct.put(content,result);
                         }else{
                             sydcProduct.put(content,1);
+                        }
+                        break;
+                    case "zfB":
+                        zfBNum+=1;
+                        if(zfBProduct.containsKey(content)){
+                            int zfBtmp=zfBProduct.get(content)+1;
+                            zfBProduct.remove(content);
+                            zfBProduct.put(content,zfBtmp);
+                        }else{
+                            zfBProduct.put(content,1);
+                        }
+                        break;
+                    case "zfC":
+                        zfCNum+=1;
+                        if(zfCProduct.containsKey(content)){
+                            int zfCtmp=zfCProduct.get(content)+1;
+                            zfCProduct.remove(content);
+                            zfCProduct.put(content,zfCtmp);
+                        }else{
+                            zfCProduct.put(content,1);
                         }
                         break;
                     case "zf":
@@ -119,10 +144,16 @@ public class ProcessExcel {
 //                    }
 //                }
             }
+            System.out.println("租房B总数量为"+zfBNum);
+            System.out.println("各类目"+zfBProduct);
+            System.out.println("租房C总数量为"+zfCNum);
+            System.out.println("各类目"+zfCProduct);
+            System.out.println("租房其他总数量为"+zfNum);
+            System.out.println("各类目"+zfProduct);
+            int total=zfBNum+zfCNum+zfNum;
+            System.out.println("租房总"+total);
             System.out.println("商业地产总数量为"+sydcNum);
             System.out.println("各类目"+sydcProduct);
-            System.out.println("租房总数量为"+zfNum);
-            System.out.println("各类目"+zfProduct);
             System.out.println("公共支持总数量为"+ggzcNum);
             System.out.println("各类目"+ggzcProduct);
             System.out.println("交易总数量为"+jyNum);
