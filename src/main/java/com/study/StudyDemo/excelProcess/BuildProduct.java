@@ -30,6 +30,7 @@ public class BuildProduct {
 //          租房C
         map.put("租房-房东组","zfC");
         map.put("租房-经纪组","zfC");
+        map.put("租房经纪人信息治理","zfC");
 //        租房其他
         map.put("前端-租房组","zf");
         map.put("前端-公寓组","zf");
