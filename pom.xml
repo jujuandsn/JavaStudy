@@ -16,6 +16,14 @@
 	<properties>
 		<java.version>17</java.version>
 	</properties>
+<!--	从国外仓库下载较慢，可以从国内镜像仓库下载，没有的话才从国外下载-->
+	<repositories>
+		<repository>
+			<id>aliyun</id>
+			<name>aliyun</name>
+			<url>https://maven.aliyun.com/repository/public </url>
+		</repository>
+	</repositories>
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -61,6 +69,29 @@
 			<groupId>org.apache.maven.surefire</groupId>
 			<artifactId>surefire-booter</artifactId>
 			<version>2.5</version>
+		</dependency>
+		<dependency>
+			<groupId>org.mybatis</groupId>
+			<artifactId>mybatis</artifactId>
+			<version>3.5.7</version>
+		</dependency>
+<!--		mysql jdbc驱动引入-->
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>5.1.49</version>
+		</dependency>
+<!--		单元测试框架-->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<scope>test</scope>
+			<version>4.13</version>
+		</dependency>
+		<dependency>
+			<groupId></groupId>
+			<artifactId></artifactId>
+			<version></version>
 		</dependency>
 
 	</dependencies>
