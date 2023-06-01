@@ -24,6 +24,7 @@
 			<url>https://maven.aliyun.com/repository/public </url>
 		</repository>
 	</repositories>
+
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -50,11 +51,11 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-		<dependency>
-			<groupId>org.apache.poi</groupId>
-			<artifactId>poi-ooxml</artifactId>
-			<version>3.17</version>
-		</dependency>
+<!--		<dependency>-->
+<!--			<groupId>org.apache.poi</groupId>-->
+<!--			<artifactId>poi-ooxml</artifactId>-->
+<!--			<version>3.17</version>-->
+<!--		</dependency>-->
 		<dependency>
 			<groupId>org.junit.jupiter</groupId>
 			<artifactId>junit-jupiter-api</artifactId>
@@ -88,11 +89,12 @@
 			<scope>test</scope>
 			<version>4.13</version>
 		</dependency>
-		<dependency>
-			<groupId></groupId>
-			<artifactId></artifactId>
-			<version></version>
-		</dependency>
+
+		<!--		<dependency>-->
+<!--			<groupId></groupId>-->
+<!--			<artifactId></artifactId>-->
+<!--			<version></version>-->
+<!--		</dependency>-->
 
 	</dependencies>
 

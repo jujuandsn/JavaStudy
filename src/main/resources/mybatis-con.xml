@@ -3,6 +3,10 @@
         PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
         "https://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
+<!--    goods_id=>goodsId 驼峰命名转化-->
+    <settings>
+        <setting name="mapUnderscoreToCamelCase" value="true"/>
+    </settings>
 <!--    设置默认使用的数据库-->
     <environments default="dev">
         <environment id="dev">
@@ -12,8 +16,8 @@
             <dataSource type="POOLED">
                 <property name="driver" value="com.mysql.jdbc.Driver"/>
 <!--                使用unicode编码来解决中文乱码的问题；使用utf-8字符集;&在xml文件中具有特殊意义，需要使用amp;进行转译-->
-                <property name="url" value="jdbc:mysql://localhost:3306/student>useUnicode=true&amp;characterEncoding=UTF-8"/>
-                <property name="name" value="root"/>
+                <property name="url" value="jdbc:mysql://localhost:3306/student?useUnicode=true&amp;characterEncoding=UTF-8"/>
+                <property name="username" value="root"/>
                 <property name="password" value="juju1."/>
             </dataSource>
         </environment>
@@ -24,10 +28,13 @@
             <dataSource type="POOLED">
                 <property name="driver" value="com.mysql.jdbc.Driver"/>
                 <!--                使用unicode编码来解决中文乱码的问题；使用utf-8字符集;&在xml文件中具有特殊意义，需要使用amp;进行转译-->
-                <property name="url" value="jdbc:mysql://localhost:3306/student>useUnicode=true&amp;characterEncoding=UTF-8"/>
-                <property name="name" value="root"/>
+                <property name="url" value="jdbc:mysql://localhost:3306/student?useUnicode=true&amp;characterEncoding=UTF-8"/>
+                <property name="username" value="root"/>
                 <property name="password" value="juju1."/>
             </dataSource>
         </environment>
     </environments>
+    <mappers>
+        <mapper resource="mappers/info.xml"></mapper>
+    </mappers>
 </configuration>
