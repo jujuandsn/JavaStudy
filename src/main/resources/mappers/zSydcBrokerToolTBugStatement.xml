@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="zSydcBrokerToolTBugStatement">
+    <select id="selectByweek" parameterType="Integer" resultType="com.study.StudyDemo.entity.zSydcBrokerToolTBugStatement">
+        select * from z_sydc_broker_tool_t_bug_statement where week = #{week}
+    </select>
+    <select id="selectByweekAndYear" parameterType="java.util.Map" resultType="com.study.StudyDemo.entity.zSydcBrokerToolTBugStatement">
+        select * from z_sydc_broker_tool_t_bug_statement where week = #{week} and year =#{year}
+    </select>
+</mapper>

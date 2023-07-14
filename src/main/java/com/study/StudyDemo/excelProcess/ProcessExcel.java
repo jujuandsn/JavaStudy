@@ -28,7 +28,7 @@ public class ProcessExcel {
         int zfNum=0;
         int ggzcNum=0;
         int jyNum=0;
-        int afNum=0;
+//        int afNum=0;
         int zfBNum=0;
         int zfCNum=0;
 
@@ -37,16 +37,16 @@ public class ProcessExcel {
         Map<String, Integer> zfProduct=new HashMap<>();
         Map<String, Integer> ggzcProduct=new HashMap<>();
         Map<String, Integer> jyProduct=new HashMap<>();
-        Map<String, Integer> afProduct=new HashMap<>();
+//        Map<String, Integer> afProduct=new HashMap<>();
         Map<String, Integer> zfBProduct=new HashMap<>();
         Map<String, Integer> zfCProduct=new HashMap<>();
         try {
 //            读取excel文件到对象中
-            HSSFWorkbook book = new HSSFWorkbook(new FileInputStream("/Users/juju/Desktop/ologw19.xls"));
+            HSSFWorkbook book = new HSSFWorkbook(new FileInputStream("/Users/juju/Downloads/ologw27.xls"));
 //            根据sheet名称获取表格页
-//            HSSFSheet table = book.getSheet("导出计数_业务线");
-            HSSFSheet table = book.getSheet("项目创建数据");
-//            HSSFSheet table = book.getSheet("项目上线数据");
+
+//            HSSFSheet table = book.getSheet("项目创建数据");
+            HSSFSheet table = book.getSheet("项目上线数据");
             for(int i=1; i<= table.getLastRowNum();i++){
 //                判断属于哪个大类
                 String content=table.getRow(i).getCell(3).getStringCellValue();
@@ -117,16 +117,16 @@ public class ProcessExcel {
                             jyProduct.put(content,1);
                         }
                         break;
-                    case "af":
-                        afNum+=1;
-                        if(afProduct.containsKey(content)){
-                            int aftmp=afProduct.get(content)+1;
-                            afProduct.remove(content);
-                            afProduct.put(content,aftmp);
-                        }else {
-                            afProduct.put(content,1);
-                        }
-                        break;
+//                    case "af":
+//                        afNum+=1;
+//                        if(afProduct.containsKey(content)){
+//                            int aftmp=afProduct.get(content)+1;
+//                            afProduct.remove(content);
+//                            afProduct.put(content,aftmp);
+//                        }else {
+//                            afProduct.put(content,1);
+//                        }
+//                        break;
                     default:
                         System.out.println("content");
                         break;
@@ -158,8 +158,8 @@ public class ProcessExcel {
             System.out.println("各类目"+ggzcProduct);
             System.out.println("交易总数量为"+jyNum);
             System.out.println("各类目"+jyProduct);
-            System.out.println("爱房总数量为"+afNum);
-            System.out.println("各类目"+afProduct);
+//            System.out.println("爱房总数量为"+afNum);
+//            System.out.println("各类目"+afProduct);
 //            System.out.println(table.getFirstRowNum());
 //            System.out.println(table.getLastRowNum());
         } catch (IOException e) {

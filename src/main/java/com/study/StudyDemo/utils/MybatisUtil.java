@@ -1,5 +1,6 @@
 package com.study.StudyDemo.utils;
 
+
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
@@ -12,6 +13,7 @@ import java.io.Reader;
  */
 public class MybatisUtil {
 //    通过static来保证sqlSessionFactory是属于类而不是对象的，实现了他的唯一性(属于类而不属于对象)
+
     private static SqlSessionFactory sqlSessionFactory= null;
 //    初始化静态对象
     static {

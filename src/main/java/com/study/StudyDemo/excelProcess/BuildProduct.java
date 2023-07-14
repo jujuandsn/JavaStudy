@@ -54,7 +54,7 @@ public class BuildProduct {
 
 
 
-        map.put("新房直销","af");
+//        map.put("新房直销","af");
         map.put("交易服务","jy");
 
 //        System.out.println(map);
