@@ -42,11 +42,11 @@ public class ProcessExcel {
         Map<String, Integer> zfCProduct=new HashMap<>();
         try {
 //            读取excel文件到对象中
-            HSSFWorkbook book = new HSSFWorkbook(new FileInputStream("/Users/juju/Downloads/ologw27.xls"));
+            HSSFWorkbook book = new HSSFWorkbook(new FileInputStream("/Users/juju/Downloads/ologw29.xls"));
 //            根据sheet名称获取表格页
 
-//            HSSFSheet table = book.getSheet("项目创建数据");
-            HSSFSheet table = book.getSheet("项目上线数据");
+            HSSFSheet table = book.getSheet("项目创建数据");
+//            HSSFSheet table = book.getSheet("项目上线数据");
             for(int i=1; i<= table.getLastRowNum();i++){
 //                判断属于哪个大类
                 String content=table.getRow(i).getCell(3).getStringCellValue();

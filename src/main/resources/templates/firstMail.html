@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>我的第一封测试邮件</title>
+</head>
+<body>
+    <table>
+        <thead>
+        <tr>
+            <td>id</td>
+            <td>bug状态</td>
+            <td>详情</td>
+        </tr>
+        </thead>
+        <tbody>
+            <td th:text="$:{info.id}"></td>
+            <td th:text="$:{info.state}"></td>
+            <td th:text="$:{info.detail}"></td>
+        </tbody>
+    </table>
+</body>
+</html>
